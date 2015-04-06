@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Tesco.OnlineRetail.Models.GiftProductCategory>
+
+@{
+    ViewBag.Title = "GiftCategory";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <br>
+        @using (Html.BeginForm("SearchProduct","GiftProductCategory", FormMethod.Post)) {
+            @Html.TextBox("product", "")
+
+        <input type="submit" value="Search">
+        }
+            <p class="lead">
+                <br>
+
+                @Html.DisplayNameFor(model => model.GiftCategoryName)
+
+            </p>
+            <div class="list-group">
+
+                @foreach (var item in Model)
+                {
+
+                    @*@Html.DisplayFor(modelItem => item.GiftCategoryName)*@
+                    <a href="#" onclick="getProducts(@item.GiftProductCategoryId)" class="list-group-item ">@Html.DisplayFor(modelItem => item.GiftCategoryName)</a>
+
+
+                }
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+
+        <div id="products">
+
+        </div>
+      
+        <br>
+        <br>
+
+       
+</div>
+</div>
+
+<script>
+
+            function getProducts(catId) {
+
+                $.ajax({
+                    dataType: "json",
+                    url: "/GiftProductCategory/GetGiftProductlistByCatId",
+                    data: { id: catId },
+                    success: function (products) {
+
+                        $("#products").empty();
+
+                        var content = "";
+
+                        content = content + " <div class='col-md-9'>";
+
+                        for (var product in products) {
+                            content = content + "<div class='row'>";
+                            content = content + "<div class='col-md-3'>";
+                            content = content + "<div class='thumbnail'>";
+                            content = content + "<div class='caption'>" +products[product].Name + "<br>";
+                            //content = content + products[product].ProductDesc;
+                            content = content + "<h4>" + products[product].RedeemPoints + "</h4>" + "</div>";
+
+                            content = content + "<br>" + "<a href='/History'><button>Redeem</button></a>" + "</div>";
+                            content = content + "</div>";
+                            content = content + "</div>";
+                            content = content + "<br>";
+                        }
+                        content = content + "<br />";
+
+                        $("#products").append(content);
+                    }
+                });
+            }
+
+</script>

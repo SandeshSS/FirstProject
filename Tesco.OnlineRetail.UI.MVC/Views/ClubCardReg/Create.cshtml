@@ -1,0 +1,63 @@
+﻿@model Tesco.OnlineRetail.Models.ClubCardReg
+
+@{
+    ViewBag.Title = "ClubCard";
+}
+
+@*<h2>Create</h2>*@
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @*<h4>ClubCardReg</h4>
+        <hr />*@
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.ClubCardNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ClubCardNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ClubCardNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+  
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.CustomerID, ViewBag.CustomerItems as IEnumerable<SelectListItem>)
+            </div>
+        </div>*@
+        <style>
+            h2 {
+                font-family: 'Times New Roman';
+                font-size: x-large;
+                font-style: italic;
+                color: darkblue;
+            }
+        </style>
+        <table>
+            <tr>
+                <td><div><img src="~/images.jpg" /></div></td>
+                <td><div><img src="~/clubcard1.jpg" /></div></td>
+                <td><div><img src="~/clubcard2.jpg" /></div></td>
+            </tr>
+        </table>
+        <h2>HELLO, @Session["custname"]
+        <br /> 
+        Apply for clubcard,just by clicking the register button</h2>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("", "Create")
+</div>*@

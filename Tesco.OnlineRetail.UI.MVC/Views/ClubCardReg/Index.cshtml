@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Tesco.OnlineRetail.Models.ClubCardReg>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<table class="table">*@
+    @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClubCardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th></th>
+    </tr>*@
+
+@*@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClubCardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ClubCardRegId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ClubCardRegId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ClubCardRegId })
+        </td>
+    </tr>
+}
+
+</table>*@
+<style>
+    h2 {
+        font-family: 'Times New Roman';
+        font-size: x-large;
+        font-style: italic;
+        color: darkblue;
+    }
+</style>
+<table>
+    <tr>
+        <td><div><img src="~/images (6).jpg" /></div></td>
+        <td><div><img src="~/clubcard.jpg" /></div></td>
+        <td><div><img src="~/images (4).jpg" /></div></td>
+    </tr>
+</table>
+<h2><b>Congratulations, you are succesfully applied for clubcard</b></h2>
+@*<h4><a href="~/Shipping/Create">Wants to change your shipping Address???</a></h4>*@
+
