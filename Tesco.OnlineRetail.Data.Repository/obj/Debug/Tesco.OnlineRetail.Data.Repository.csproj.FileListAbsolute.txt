@@ -65,3 +65,15 @@ D:\Tesco.OnlineRetail\Tesco.OnlineRetail.Data.Repository\bin\Debug\EntityFramewo
 D:\Tesco.OnlineRetail\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.csprojResolveAssemblyReference.cache
 D:\Tesco.OnlineRetail\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.dll
 D:\Tesco.OnlineRetail\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.pdb
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\Tesco.OnlineRetail.Data.Repository.dll.config
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\Tesco.OnlineRetail.Data.Repository.dll
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\Tesco.OnlineRetail.Data.Repository.pdb
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\EntityFramework.dll
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\Tesco.OnlineRetail.Models.dll
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\Tesco.OnlineRetail.Models.pdb
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\EntityFramework.xml
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.csprojResolveAssemblyReference.cache
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.dll
+C:\Users\yq28\Documents\GitHub\FirstProject\Tesco.OnlineRetail.Data.Repository\obj\Debug\Tesco.OnlineRetail.Data.Repository.pdb

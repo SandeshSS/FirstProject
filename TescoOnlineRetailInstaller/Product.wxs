@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*"  Name="TescoOnlineRetailSetup" Language="1033" Version="1.0.0.0" Manufacturer="Tesco.com" >
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <!-- Custom Actions -->
+    <InstallExecuteSequence>
+      <!-- The TARGETDIR is "" if it is not specified -->
+      <Custom Action="DefaultInstallDrive" Before="CostInitialize" ><![CDATA[INSTALLDRIVE=""]]></Custom>
+      <Custom Action='WixExitEarlyWithSuccess' After='FindRelatedProducts'>Installed AND NOT UPGRADEFOUND AND NOT Preselected</Custom>
+      <RemoveExistingProducts After='InstallInitialize' />
+    </InstallExecuteSequence>
+
+    <!-- Initialise the Install Drive, Base Directory and the Log Drive if not specified in the call to the MSI-->
+    <CustomAction Id="DefaultInstallDrive" Property="INSTALLDRIVE" Value="D:\" />
+
+    <CustomActionRef Id="WixExitEarlyWithSuccess" />
+    <!-- The name of the cab inside the MSI-->
+    <Media Id="1" Cabinet="media1.cab" EmbedCab="yes" />
+
+    <Feature Id="ProductFeature" Title="(..\ProductName).Setup" Level="1">
+      <!-- Note: The following ComponentGroupRef is required to pull in generated authring from project references. -->
+      <ComponentGroupRef Id="TescoOnlineRetailInstaller"/>
+    </Feature>
+    <!-- This forces on to the D: Drive-->
+    <Property Id="ROOTDRIVE" Value="D:\" />
+    <Property Id="ARPNOMODIFY" Value="1" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="INSTALLDRIVE">
+        <Directory Id="BaseDir" Name="TescoOnlineRetail">
+          <Directory Id="ApplicationDirectory" Name="ApplicationName">
+            <!-- This is the location that the files will be published to -->
+            
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <!--<Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Minimum='0.0.0.0' IncludeMinimum='yes' Maximum='255.255.65535.255' IncludeMaximum='yes' Property='UPGRADEFOUND' />
+    </Upgrade>-->
+  </Product>
+
+  <Fragment>
+    <ComponentGroup Id="TescoOnlineRetailInstaller">
+      <ComponentGroupRef Id="ApplicationFiles" />
+      
+    </ComponentGroup>
+  </Fragment>
+</Wix>

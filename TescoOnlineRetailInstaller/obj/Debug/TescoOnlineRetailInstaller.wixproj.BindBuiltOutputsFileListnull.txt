@@ -1,0 +1,2 @@
+C:\Users\yq28\Documents\GitHub\FirstProject\TescoOnlineRetailInstaller\bin\Debug\TescoOnlineRetailInstaller.msi
+C:\Users\yq28\Documents\GitHub\FirstProject\TescoOnlineRetailInstaller\bin\Debug\TescoOnlineRetailInstaller.wixpdb
